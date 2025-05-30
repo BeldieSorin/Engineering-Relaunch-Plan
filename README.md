@@ -4,7 +4,7 @@ A guided month-long syllabus to rebuild engineering mastery with integrated math
 
 ---
 
-## 📅 Week 1: Thermodynamics + Calculus Refresher
+## 🗕️ Week 1: Thermodynamics + Calculus Refresher
 **Goal:** Reconnect with physical laws through calculus
 
 ### 🔧 Topics
@@ -14,7 +14,7 @@ A guided month-long syllabus to rebuild engineering mastery with integrated math
 - Integrals: work done in expansion/compression
 - Visualizing p–v–T surfaces with Python
 
-### 📆 Tasks
+### 🗖️ Tasks
 - [ ] Review thermodynamic state properties: p, V, T, U, H, S
 - [ ] Derive work done for isothermal and adiabatic processes (ideal gas)
 - [ ] Code a Python script to plot:
@@ -24,7 +24,7 @@ A guided month-long syllabus to rebuild engineering mastery with integrated math
 - [ ] Solve integrals involving work and internal energy
 - [ ] Plot T-s diagram for a simple Rankine-like cycle (qualitative)
 
-### 🖊️ Python Starter Script Outline
+### 💊 Python Starter Script Outline
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -56,7 +56,7 @@ plt.show()
 
 ---
 
-## 📅 Week 2: Probability, Statistics & Data Foundations
+## 🗕️ Week 2: Probability, Statistics & Data Foundations
 **Goal:** Build statistical intuition for engineering simulations
 
 ### 🔧 Topics
@@ -69,7 +69,7 @@ plt.show()
 - Monte Carlo simulation (first use)
 - Visualizing uncertainty with Python (histograms, scatter plots)
 
-### 📆 Tasks
+### 🗖️ Tasks
 - [ ] Review probability axioms and basic rules (addition/multiplication)
 - [ ] Code and plot:
   - A binomial distribution (n=20, p=0.5)
@@ -79,7 +79,7 @@ plt.show()
 - [ ] Calculate confidence intervals for sample means
 - [ ] Generate and interpret a correlation matrix in Pandas
 
-### 🖊️ Python Snippet Starter
+### 💊 Python Snippet Starter
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -110,7 +110,7 @@ plt.show()
 
 ---
 
-## 📅 Week 3: Fluid Mechanics + Vector Calculus
+## 🗕️ Week 3: Fluid Mechanics + Vector Calculus
 **Goal:** Solidify flow intuition and conservation law grounding
 
 ### 🔧 Topics
@@ -123,7 +123,7 @@ plt.show()
 - Navier–Stokes equation (introductory form)
 - Plotting streamlines and flow fields in Python
 
-### 📆 Tasks
+### 🗖️ Tasks
 - [ ] Derive and interpret the continuity equation
 - [ ] Visualize 2D flow field (vector plot) in Python
 - [ ] Compute divergence and curl for a sample vector field
@@ -131,7 +131,7 @@ plt.show()
 - [ ] Apply Bernoulli equation to real or ideal flows
 - [ ] Explore stream function in irrotational flow
 
-### 🖊️ Python Snippet Starter
+### 💊 Python Snippet Starter
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -158,7 +158,7 @@ plt.show()
 
 ---
 
-## 📅 Week 4: PDEs + Numerical Methods
+## 🗕️ Week 4: PDEs + Numerical Methods
 **Goal:** Connect math theory to simulation techniques
 
 ### 🔧 Topics
@@ -175,10 +175,36 @@ plt.show()
 
 ---
 
-## 🤔 After Month 1
-- **Week 5**: Turbomachinery — Axial/radial stages, velocity triangles, efficiencies  
-  ☑ Book: *Fluid Dynamics and Heat Transfer of Turbomachinery*
+## 🗕️ Week 5: Turbomachinery Fundamentals
+**Goal:** Build a foundational grasp of axial and radial turbomachinery for propulsion and energy applications
 
+### 🔧 Topics
+- Types of turbomachines: compressors vs. turbines, radial vs. axial
+- Velocity triangles (inlet/outlet, absolute/relative frames)
+- Blade angles, reaction ratio, degree of reaction
+- Euler’s turbomachinery equation
+- Efficiency measures (isentropic vs. polytropic)
+- Stage-by-stage analysis
+- Intro to cascade flow
+
+### 🗖️ Tasks
+- [ ] Sketch velocity triangles for an axial stage
+- [ ] Derive Euler turbine equation and apply to a turbine/compressor stage
+- [ ] Calculate stage efficiency for given inlet/outlet conditions
+- [ ] Visualize pressure and velocity changes across blades
+- [ ] Interpret common performance maps (compressor, turbine)
+
+### 💊 Python/Math Starter
+- Placeholder: Python plotting of velocity triangles and simplified turbine work calculation (to be added)
+
+### 📚 Resources
+- *Fluid Dynamics and Heat Transfer of Turbomachinery*
+- Dixon & Hall – *Fluid Mechanics and Thermodynamics of Turbomachinery*
+- MIT OCW Gas Turbines Lectures
+
+---
+
+## 🤔 After Month 1
 - **Week 6**: Material Resistance — Stress, strain, failure modes  
   ☑ Book suggestions to be confirmed
 
@@ -195,4 +221,4 @@ Stay consistent. Note what you understand, log code + math in GitHub, and revisi
 
 ---
 
-To be continued with **Week 4 structure and exercises...**
+To be continued with **Week 6 structure and exercises...**
