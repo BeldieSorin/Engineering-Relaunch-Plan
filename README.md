@@ -4,7 +4,7 @@ A guided month-long syllabus to rebuild engineering mastery with integrated math
 
 ---
 
-## 🗕️ Week 1: Thermodynamics + Calculus Refresher
+## 🗅️ Week 1: Thermodynamics + Calculus Refresher
 **Goal:** Reconnect with physical laws through calculus
 
 ### 🔧 Topics
@@ -14,7 +14,7 @@ A guided month-long syllabus to rebuild engineering mastery with integrated math
 - Integrals: work done in expansion/compression
 - Visualizing p–v–T surfaces with Python
 
-### 🗖️ Tasks
+### 🖖️ Tasks
 - [ ] Review thermodynamic state properties: p, V, T, U, H, S
 - [ ] Derive work done for isothermal and adiabatic processes (ideal gas)
 - [ ] Code a Python script to plot:
@@ -56,7 +56,7 @@ plt.show()
 
 ---
 
-## 🗕️ Week 2: Probability, Statistics & Data Foundations
+## 🗅️ Week 2: Probability, Statistics & Data Foundations
 **Goal:** Build statistical intuition for engineering simulations
 
 ### 🔧 Topics
@@ -69,7 +69,7 @@ plt.show()
 - Monte Carlo simulation (first use)
 - Visualizing uncertainty with Python (histograms, scatter plots)
 
-### 🗖️ Tasks
+### 🖖️ Tasks
 - [ ] Review probability axioms and basic rules (addition/multiplication)
 - [ ] Code and plot:
   - A binomial distribution (n=20, p=0.5)
@@ -110,7 +110,7 @@ plt.show()
 
 ---
 
-## 🗕️ Week 3: Fluid Mechanics + Vector Calculus
+## 🗅️ Week 3: Fluid Mechanics + Vector Calculus
 **Goal:** Solidify flow intuition and conservation law grounding
 
 ### 🔧 Topics
@@ -123,7 +123,7 @@ plt.show()
 - Navier–Stokes equation (introductory form)
 - Plotting streamlines and flow fields in Python
 
-### 🗖️ Tasks
+### 🖖️ Tasks
 - [ ] Derive and interpret the continuity equation
 - [ ] Visualize 2D flow field (vector plot) in Python
 - [ ] Compute divergence and curl for a sample vector field
@@ -158,7 +158,7 @@ plt.show()
 
 ---
 
-## 🗕️ Week 4: PDEs + Numerical Methods
+## 🗅️ Week 4: PDEs + Numerical Methods
 **Goal:** Connect math theory to simulation techniques
 
 ### 🔧 Topics
@@ -175,7 +175,7 @@ plt.show()
 
 ---
 
-## 🗕️ Week 5: Turbomachinery Fundamentals
+## 🗅️ Week 5: Turbomachinery Fundamentals
 **Goal:** Build a foundational grasp of axial and radial turbomachinery for propulsion and energy applications
 
 ### 🔧 Topics
@@ -187,7 +187,7 @@ plt.show()
 - Stage-by-stage analysis
 - Intro to cascade flow
 
-### 🗖️ Tasks
+### 🖖️ Tasks
 - [ ] Sketch velocity triangles for an axial stage
 - [ ] Derive Euler turbine equation and apply to a turbine/compressor stage
 - [ ] Calculate stage efficiency for given inlet/outlet conditions
@@ -204,7 +204,7 @@ plt.show()
 
 ---
 
-## 🗕️ Week 6: Material Resistance & Structural Mechanics
+## 🗅️ Week 6: Material Resistance & Structural Mechanics
 **Goal:** Understand stress, strain, and deformation in engineering components
 
 ### 🔧 Topics
@@ -216,7 +216,7 @@ plt.show()
 - Beam deflection and stress concentration
 - Failure criteria (yield, fracture)
 
-### 🗖️ Tasks
+### 🖖️ Tasks
 - [ ] Compute axial stress/strain for simple bars
 - [ ] Analyze torsion in circular shafts
 - [ ] Draw shear and bending moment diagrams
@@ -232,11 +232,60 @@ plt.show()
 
 ---
 
-## 🤔 After Month 1
-- **Week 7**: Combustion Theory & High-Speed Flow  
-  ☑ Book: *Hypersonic and High-Temperature Gas Dynamics* (Anderson)  
-  ☑ Begin focus on **supersonic combustion** and **aerobreathing engines** (SCRAMJET intro)
+## 🗅️ Week 7: Combustion Theory & High-Speed Flow
+**Goal:** Explore fundamentals of reacting flows and supersonic combustion relevant to airbreathing engines
 
+### 🔧 Topics
+- Chemical kinetics: reaction rates, Arrhenius law
+- Energy release and flame temperature
+- Premixed and diffusion flames
+- Detonation vs. deflagration
+- Combustion in nozzles and ducts
+- High-speed reacting flow: compressibility effects
+- Introduction to **SCRAMJET** propulsion
+- Oblique shocks and heat addition in supersonic flow
+
+### 🖖️ Tasks
+- [ ] Calculate adiabatic flame temperature for hydrogen-air
+- [ ] Sketch Mach number change with heat addition (Rayleigh flow)
+- [ ] Analyze a SCRAMJET schematic for flow path characteristics
+- [ ] Plot oblique shock angle vs. Mach number for various deflection angles
+- [ ] Compute simple laminar flame speed from kinetic model
+
+### 💊 Python Snippet Starter
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+def oblique_shock_angle(M, theta_deg, gamma=1.4):
+    theta = np.radians(theta_deg)
+    beta_range = np.radians(np.linspace(theta_deg, 90, 500))
+    f = lambda beta: 2 * np.tan(theta) * (M**2 * np.sin(beta)**2 - 1) / \
+                     (M**2 * (gamma + np.cos(2 * beta)) + 2) - np.tan(beta - theta)
+    diff = [abs(f(b)) for b in beta_range]
+    best_beta = beta_range[np.argmin(diff)]
+    return np.degrees(best_beta)
+
+theta_vals = np.linspace(1, 30, 100)
+shock_angles = [oblique_shock_angle(3.0, th) for th in theta_vals]
+
+plt.plot(theta_vals, shock_angles)
+plt.xlabel("Deflection Angle (°)")
+plt.ylabel("Shock Angle (°)")
+plt.title("Oblique Shock Angle vs Deflection (M=3)")
+plt.grid(True)
+plt.show()
+```
+
+### 📚 Resources
+- Anderson – *Hypersonic and High-Temperature Gas Dynamics*
+- Turns – *An Introduction to Combustion*
+- MIT OCW: Unified Engineering (Propulsion Lectures)
+- NASA Glenn SCRAMJET resources
+
+---
+
+## 🤔 After Month 1
 - **Week 8+**: Advanced Thermodynamics + Multiphysics Coupling  
   ☑ Bridging thermo with CFD/simulations and optimization techniques
 
@@ -246,4 +295,4 @@ Stay consistent. Note what you understand, log code + math in GitHub, and revisi
 
 ---
 
-To be continued with **Week 7 structure and exercises...**
+To be continued...
