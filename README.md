@@ -285,9 +285,35 @@ plt.show()
 
 ---
 
+## 🗅️ Week 8: Advanced Thermodynamics & Multiphysics CFD
+**Goal:** Couple heat transfer, flow, and structure into simulated reality
+
+### 🔧 Topics
+- Radiation heat transfer (Stefan–Boltzmann law, view factors)
+- Conduction/convection coupling
+- Thermodynamic property interpolation (tables, cubic EOS)
+- Basics of CFD: mesh, solver types, boundary conditions
+- Introduction to OpenFOAM and FEniCS
+- Multiphysics cases (e.g. cooled turbine blade)
+- Postprocessing and verification
+
+### 🖖️ Tasks
+- [ ] Calculate view factor for 2 surfaces
+- [ ] Code a conduction/convection model in 1D wall (lumped method)
+- [ ] Study boundary layer mesh for CFD model
+- [ ] Install and run a basic OpenFOAM case
+- [ ] Visualize velocity and temperature contours
+
+### 📚 Resources
+- Incropera – *Fundamentals of Heat and Mass Transfer*
+- OpenFOAM & FEniCS tutorials
+- MIT CFD Lectures, ANSYS student resources
+
+---
+
 ## 🤔 After Month 1
-- **Week 8+**: Advanced Thermodynamics + Multiphysics Coupling  
-  ☑ Bridging thermo with CFD/simulations and optimization techniques
+- **Week 9+**: Aerospace Systems, Structural FEM, Rotor Dynamics
+  ☑ Emphasis on simulation, vibration modes, optimization
 
 Stay consistent. Note what you understand, log code + math in GitHub, and revisit difficult topics iteratively.
 
