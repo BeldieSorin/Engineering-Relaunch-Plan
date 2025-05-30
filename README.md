@@ -204,10 +204,35 @@ plt.show()
 
 ---
 
-## 🤔 After Month 1
-- **Week 6**: Material Resistance — Stress, strain, failure modes  
-  ☑ Book suggestions to be confirmed
+## 🗕️ Week 6: Material Resistance & Structural Mechanics
+**Goal:** Understand stress, strain, and deformation in engineering components
 
+### 🔧 Topics
+- Normal and shear stress/strain
+- Hooke’s Law and elastic modulus
+- Poisson’s ratio and material properties
+- Mohr’s Circle (intro)
+- Bending, torsion, axial loading
+- Beam deflection and stress concentration
+- Failure criteria (yield, fracture)
+
+### 🗖️ Tasks
+- [ ] Compute axial stress/strain for simple bars
+- [ ] Analyze torsion in circular shafts
+- [ ] Draw shear and bending moment diagrams
+- [ ] Estimate max bending stress in beams
+- [ ] Intro sketch of Mohr’s Circle for 2D stress state
+- [ ] Review material safety factors and strength assumptions
+
+### 📚 Resources
+- Hibbeler – *Mechanics of Materials*
+- Gere & Goodno – *Mechanics of Materials*
+- MIT OCW Solid Mechanics / Statics
+- YouTube: Michel van Biezen – Mechanics of Materials series
+
+---
+
+## 🤔 After Month 1
 - **Week 7**: Combustion Theory & High-Speed Flow  
   ☑ Book: *Hypersonic and High-Temperature Gas Dynamics* (Anderson)  
   ☑ Begin focus on **supersonic combustion** and **aerobreathing engines** (SCRAMJET intro)
@@ -221,4 +246,4 @@ Stay consistent. Note what you understand, log code + math in GitHub, and revisi
 
 ---
 
-To be continued with **Week 6 structure and exercises...**
+To be continued with **Week 7 structure and exercises...**
