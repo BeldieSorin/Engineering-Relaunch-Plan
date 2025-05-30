@@ -14,8 +14,43 @@ A guided month-long syllabus to rebuild engineering mastery with integrated math
 - Integrals: work done in expansion/compression
 - Visualizing p–v–T surfaces with Python
 
+### 📆 Tasks
+- [ ] Review thermodynamic state properties: p, V, T, U, H, S
+- [ ] Derive work done for isothermal and adiabatic processes (ideal gas)
+- [ ] Code a Python script to plot:
+  - Isothermal process in p-V space
+  - Adiabatic process in p-V space
+- [ ] Practice partial derivatives: ∂U/∂T, ∂p/∂V, ∂H/∂p
+- [ ] Solve integrals involving work and internal energy
+- [ ] Plot T-s diagram for a simple Rankine-like cycle (qualitative)
+
+### 🖊️ Python Starter Script Outline
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+def isothermal(V, n=1, R=8.314, T=300):
+    return n * R * T / V
+
+def adiabatic(V, n=1, R=8.314, T0=300, gamma=1.4):
+    return (n * R * T0) * (V[0] / V)**gamma
+
+V = np.linspace(0.001, 0.01, 100)
+p1 = isothermal(V)
+p2 = adiabatic(V)
+
+plt.plot(V, p1, label='Isothermal')
+plt.plot(V, p2, label='Adiabatic')
+plt.xlabel('Volume [m^3]')
+plt.ylabel('Pressure [Pa]')
+plt.title('p-V Diagram')
+plt.legend()
+plt.grid(True)
+plt.show()
+```
+
 ### 📚 Resources
-- Moran & Shapiro – *Fundamentals of Engineering Thermodynamics*
+- Moran & Shapiro – *Fundamentals of Engineering Thermodynamics* (to be replaced if needed)
 - MIT OCW Thermodynamics
 - Paul's Online Math Notes (Calculus I & II)
 
@@ -73,7 +108,7 @@ A guided month-long syllabus to rebuild engineering mastery with integrated math
 
 ---
 
-## 🧐 After Month 1
+## 🤔 After Month 1
 - **Week 5**: Turbomachinery — Axial/radial stages, velocity triangles, efficiencies  
   ☑ Book: *Fluid Dynamics and Heat Transfer of Turbomachinery*
 
@@ -93,4 +128,4 @@ Stay consistent. Note what you understand, log code + math in GitHub, and revisi
 
 ---
 
-To be continued with full **Week 1 structure and exercises...**
+To be continued with **Week 2 structure and exercises...**
