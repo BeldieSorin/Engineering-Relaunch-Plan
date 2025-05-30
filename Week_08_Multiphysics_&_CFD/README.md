@@ -1,3 +1,13 @@
-# Week Template
+# Week 8: Multiphysics Simulation & Coupled Systems
 
-Use this folder to document goals, theory, tasks, and links for the selected week.
+**Goal:** Bridge thermofluid theory to simulation using real-world tools.
+
+## 🔧 Topics
+- CFD vs FEM vs FVM
+- Heat + fluid + stress coupling
+- Boundary conditions and turbulence models
+
+## ✅ Tasks
+- Run basic OpenFOAM or Ansys Sim
+- Simulate 2D heat conduction
+- Visualize fields and stability
