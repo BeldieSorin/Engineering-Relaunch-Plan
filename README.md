@@ -1,6 +1,3 @@
-# Engineering-Relaunch-Plan
-A guided month-long syllabus to rebuild engineering mastery with integrated math and simulation. Designed for self-paced, practical relearning.
-
 # 🚀 Engineering Relaunch Study Plan (Month 1)
 
 A guided month-long syllabus to rebuild engineering mastery with integrated math and simulation. Designed for self-paced, practical relearning.
@@ -55,6 +52,7 @@ A guided month-long syllabus to rebuild engineering mastery with integrated math
 - White – *Fluid Mechanics*
 - NPTEL Fluid Mechanics (IIT video series)
 - 3Blue1Brown – *Vector Calculus* visuals
+- **NEW**: *Fluid Dynamics and Heat Transfer of Turbomachinery* (for foundational support leading into Week 5)
 
 ---
 
@@ -75,11 +73,19 @@ A guided month-long syllabus to rebuild engineering mastery with integrated math
 
 ---
 
-## 🧠 After Month 1
-- Turbomachinery (Week 5)
-- Material Resistance (Week 6)
-- Combustion Theory (Week 7)
-- Advanced Thermodynamics (Week 8+)
+## 🧐 After Month 1
+- **Week 5**: Turbomachinery — Axial/radial stages, velocity triangles, efficiencies  
+  ☑ Book: *Fluid Dynamics and Heat Transfer of Turbomachinery*
+
+- **Week 6**: Material Resistance — Stress, strain, failure modes  
+  ☑ Book suggestions to be confirmed
+
+- **Week 7**: Combustion Theory & High-Speed Flow  
+  ☑ Book: *Hypersonic and High-Temperature Gas Dynamics* (Anderson)  
+  ☑ Begin focus on **supersonic combustion** and **aerobreathing engines** (SCRAMJET intro)
+
+- **Week 8+**: Advanced Thermodynamics + Multiphysics Coupling  
+  ☑ Bridging thermo with CFD/simulations and optimization techniques
 
 Stay consistent. Note what you understand, log code + math in GitHub, and revisit difficult topics iteratively.
 
