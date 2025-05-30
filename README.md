@@ -105,7 +105,7 @@ plt.grid(True)
 plt.show()
 ```
 
-🔗 [Go to Week 2 folder](./Week_02_Statistics_Probability)
+🔗 [Go to Week 2 folder](./Week_02_Statistics_Probabilities)
 
 ### 📚 Resources
 - OpenIntro Statistics
@@ -154,7 +154,7 @@ plt.grid(True)
 plt.show()
 ```
 
-🔗 [Go to Week 3 folder](./Week_03_Fluid_Vector)
+🔗 [Go to Week 3 folder](./Week_03_Fluids_Vector_Calc)
 
 ### 📚 Resources
 - White – *Fluid Mechanics*
@@ -202,7 +202,7 @@ plt.grid(True)
 plt.show()
 ```
 
-🔗 [Go to Week 4 folder](./Week_04_PDEs_Numerical)
+🔗 [Go to Week 4 folder](./Week_04_PDEs_Numerical_Methods)
 
 ### 📚 Resources
 - Zill – *Differential Equations with Boundary Value Problems*
@@ -298,7 +298,7 @@ plt.grid(True)
 plt.show()
 ```
 
-🔗 [Go to Week 6 folder](./Week_06_Material_Resistance)
+🔗 [Go to Week 6 folder](./Week_06_Material_Resistance_&_Structural_Mechanics)
 
 ### 📚 Resources
 - Hibbeler – *Mechanics of Materials*
@@ -342,7 +342,7 @@ plt.grid(True)
 plt.show()
 ```
 
-🔗 [Go to Week 7 folder](./Week_07_Combustion_Supersonic)
+🔗 [Go to Week 7 folder](./Week_07_Combustion_Theory_&_High-Speed_Flow)
 
 ### 📚 Resources
 - Turns – *An Introduction to Combustion*
@@ -369,7 +369,7 @@ plt.show()
 - [ ] Explore solver convergence and stability
 - [ ] Read a mesh file (.msh or .vtk)
 
-🔗 [Go to Week 8 folder](./Week_08_Multiphysics_CFD)
+🔗 [Go to Week 8 folder](./Week_08_Multiphysics_&_CFD)
 
 ### 📚 Resources
 - COMSOL Multiphysics tutorials
