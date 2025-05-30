@@ -211,3 +211,169 @@ plt.show()
 - Python: SciPy, Jupyter, Matplotlib
 
 ---
+
+## 🗅️ Week 5: Turbomachinery Fundamentals
+**Goal:** Understand energy transfer in rotating machines
+
+### 🔧 Topics
+- Energy exchange in compressors and turbines
+- Euler’s turbomachinery equation
+- Velocity triangles (inlet/outlet)
+- Axial vs radial machines
+- Blade loading and losses
+- Stage efficiency, reaction ratio
+
+### 🖖️ Tasks
+- [ ] Draw velocity triangles for axial turbine stage
+- [ ] Derive work input/output using Euler’s equation
+- [ ] Compare axial vs radial turbine efficiency
+- [ ] Plot velocity triangles using Python
+- [ ] Solve numerical example for pressure ratio and efficiency
+
+### 💊 Python Snippet Starter
+```python
+import matplotlib.pyplot as plt
+
+U = 200  # Blade speed [m/s]
+V1 = 300  # Absolute velocity at inlet
+alpha1 = 30  # Inlet angle [degrees]
+
+# Velocity triangle (inlet)
+plt.figure()
+plt.quiver(0, 0, V1 * np.cos(np.radians(alpha1)), V1 * np.sin(np.radians(alpha1)), angles='xy', scale_units='xy', scale=1, label='V1')
+plt.quiver(0, 0, U, 0, angles='xy', scale_units='xy', scale=1, label='U')
+plt.xlim(0, 350)
+plt.ylim(0, 200)
+plt.gca().set_aspect('equal', adjustable='box')
+plt.grid(True)
+plt.title('Turbomachinery Inlet Triangle')
+plt.legend()
+plt.show()
+```
+
+🔗 [Go to Week 5 folder](./Week_05_Turbomachinery)
+
+### 📚 Resources
+- Dixon & Hall – *Fluid Mechanics and Thermodynamics of Turbomachinery*
+- Open-access tutorials on velocity triangles
+- Khan Academy – Rotational energy basics
+
+---
+
+## 🗅️ Week 6: Material Resistance & Structural Mechanics
+**Goal:** Rebuild fundamentals of stress analysis and structure behavior
+
+### 🔧 Topics
+- Stress, strain, Young’s modulus
+- Axial/torsional/bending loads
+- Beam deflection formulas
+- Mohr’s Circle basics
+- Factor of safety and yield criteria
+
+### 🖖️ Tasks
+- [ ] Plot axial stress/strain graphs
+- [ ] Calculate moment of inertia for simple sections
+- [ ] Draw shear and moment diagrams (by hand or Python)
+- [ ] Construct Mohr’s Circle for a given stress state
+- [ ] Analyze cantilever beam deflection with boundary conditions
+
+### 💊 Python Snippet Starter
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+L = 1.0  # length of beam [m]
+E = 200e9  # Young's modulus [Pa]
+I = 8e-6  # moment of inertia [m^4]
+P = 1000  # Load at free end [N]
+
+x = np.linspace(0, L, 100)
+y = -P * x**2 * (3*L - x) / (6 * E * I)
+
+plt.plot(x, y * 1e3)
+plt.title('Deflection of Cantilever Beam')
+plt.xlabel('Position [m]')
+plt.ylabel('Deflection [mm]')
+plt.grid(True)
+plt.show()
+```
+
+🔗 [Go to Week 6 folder](./Week_06_Material_Resistance)
+
+### 📚 Resources
+- Hibbeler – *Mechanics of Materials*
+- MIT OCW – Solid Mechanics
+- Python: Matplotlib for beam diagrams
+
+---
+
+## 🗅️ Week 7: Combustion Theory & High-Speed Flow
+**Goal:** Understand chemical energy release and its interaction with compressible flow
+
+### 🔧 Topics
+- Combustion reactions and stoichiometry
+- Enthalpy of formation and heat release
+- Equivalence ratio and flammability
+- Flame speed, ignition delay
+- Shock waves and expansion fans
+- Supersonic inlets, combustion chambers
+- SCRAMJET cycle intro
+
+### 🖖️ Tasks
+- [ ] Balance combustion equations (methane, hydrogen)
+- [ ] Estimate adiabatic flame temperature
+- [ ] Derive 1D shock jump conditions (Rankine–Hugoniot)
+- [ ] Visualize Mach number vs pressure/temp across shock
+- [ ] Analyze basic SCRAMJET component efficiency
+
+### 💊 Python Snippet Starter
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+M1 = np.linspace(1.1, 5.0, 100)
+P2_P1 = (2.8 * M1**2 - 0.8) / 2.8
+
+plt.plot(M1, P2_P1)
+plt.title('Normal Shock Pressure Ratio vs Mach Number')
+plt.xlabel('Mach number (M1)')
+plt.ylabel('P2 / P1')
+plt.grid(True)
+plt.show()
+```
+
+🔗 [Go to Week 7 folder](./Week_07_Combustion_Supersonic)
+
+### 📚 Resources
+- Turns – *An Introduction to Combustion*
+- Anderson – *Modern Compressible Flow*
+- *Hypersonic and High-Temperature Gas Dynamics* (real copy)
+
+---
+
+## 🗅️ Week 8: Multiphysics Simulation & Coupled Systems
+**Goal:** Bridge thermofluid theory to simulation using real-world tools
+
+### 🔧 Topics
+- What is multiphysics?
+- Coupling heat + fluid flow + stress
+- CFD vs FEM vs FVM methods
+- Meshing strategies
+- Turbulence modeling basics
+- Case: heat exchanger or nozzle under stress
+
+### 🖖️ Tasks
+- [ ] Install OpenFOAM or SimScale or Ansys Student
+- [ ] Simulate 2D heat conduction with boundary conditions
+- [ ] Visualize temperature and velocity fields
+- [ ] Explore solver convergence and stability
+- [ ] Read a mesh file (.msh or .vtk)
+
+🔗 [Go to Week 8 folder](./Week_08_Multiphysics_CFD)
+
+### 📚 Resources
+- COMSOL Multiphysics tutorials
+- OpenFOAM beginner guide
+- *Numerical Heat Transfer and Fluid Flow* – Patankar
+
+---
