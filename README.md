@@ -60,16 +60,53 @@ plt.show()
 **Goal:** Build statistical intuition for engineering simulations
 
 ### 🔧 Topics
-- Distributions: normal, uniform, binomial
-- Expected value, variance, standard deviation
-- Error propagation and confidence intervals
-- Monte Carlo simulations (basic)
-- Histograms and probability visualizations
+- Probability axioms and rules
+- Discrete distributions: binomial, Poisson
+- Continuous distributions: normal, uniform
+- Mean, variance, skewness, kurtosis
+- Central Limit Theorem and its importance
+- Confidence intervals and significance
+- Monte Carlo simulation (first use)
+- Visualizing uncertainty with Python (histograms, scatter plots)
+
+### 📆 Tasks
+- [ ] Review probability axioms and basic rules (addition/multiplication)
+- [ ] Code and plot:
+  - A binomial distribution (n=20, p=0.5)
+  - A normal distribution (mean=0, std=1)
+- [ ] Use NumPy to simulate 10,000 dice rolls and plot histogram
+- [ ] Perform a basic Monte Carlo estimate of π (random sampling)
+- [ ] Calculate confidence intervals for sample means
+- [ ] Generate and interpret a correlation matrix in Pandas
+
+### 🖊️ Python Snippet Starter
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import binom, norm
+
+x_binom = np.arange(0, 21)
+pmf = binom.pmf(x_binom, n=20, p=0.5)
+
+x_norm = np.linspace(-4, 4, 1000)
+pdf = norm.pdf(x_norm, loc=0, scale=1)
+
+plt.figure(figsize=(12,5))
+plt.subplot(1, 2, 1)
+plt.stem(x_binom, pmf, basefmt=" ")
+plt.title("Binomial PMF (n=20, p=0.5)")
+
+plt.subplot(1, 2, 2)
+plt.plot(x_norm, pdf)
+plt.title("Normal PDF (mean=0, std=1)")
+plt.grid(True)
+plt.show()
+```
 
 ### 📚 Resources
 - OpenIntro Statistics
 - Khan Academy – Statistics & Probability
-- Python: NumPy, Pandas, Matplotlib
+- Python: NumPy, Pandas, Matplotlib, SciPy
 
 ---
 
@@ -77,17 +114,47 @@ plt.show()
 **Goal:** Solidify flow intuition and conservation law grounding
 
 ### 🔧 Topics
-- Streamlines, pathlines, velocity fields
-- Bernoulli’s principle
-- Gradient, divergence, curl
-- Applying vector calculus to continuity
-- Streamline plotting in Python
+- Continuity, momentum, and energy equations (differential forms)
+- Velocity fields, streamlines, streaklines
+- Bernoulli’s equation and control volume analysis
+- Vector calculus: gradient, divergence, curl
+- Stream function and potential function (2D)
+- Vorticity and circulation
+- Navier–Stokes equation (introductory form)
+- Plotting streamlines and flow fields in Python
+
+### 📆 Tasks
+- [ ] Derive and interpret the continuity equation
+- [ ] Visualize 2D flow field (vector plot) in Python
+- [ ] Compute divergence and curl for a sample vector field
+- [ ] Sketch streamlines using analytical or numeric approach
+- [ ] Apply Bernoulli equation to real or ideal flows
+- [ ] Explore stream function in irrotational flow
+
+### 🖊️ Python Snippet Starter
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+X, Y = np.meshgrid(np.linspace(-2, 2, 20), np.linspace(-2, 2, 20))
+U = -Y / (X**2 + Y**2 + 0.1)
+V = X / (X**2 + Y**2 + 0.1)
+
+plt.figure(figsize=(6,6))
+plt.streamplot(X, Y, U, V, color=np.sqrt(U**2 + V**2), linewidth=1)
+plt.title("Streamlines of Sample Flow Field")
+plt.xlabel("x")
+plt.ylabel("y")
+plt.axis("equal")
+plt.grid(True)
+plt.show()
+```
 
 ### 📚 Resources
 - White – *Fluid Mechanics*
 - NPTEL Fluid Mechanics (IIT video series)
 - 3Blue1Brown – *Vector Calculus* visuals
-- **NEW**: *Fluid Dynamics and Heat Transfer of Turbomachinery* (for foundational support leading into Week 5)
+- *Fluid Dynamics and Heat Transfer of Turbomachinery* (for transition to Week 5)
 
 ---
 
@@ -128,4 +195,4 @@ Stay consistent. Note what you understand, log code + math in GitHub, and revisi
 
 ---
 
-To be continued with **Week 2 structure and exercises...**
+To be continued with **Week 4 structure and exercises...**
