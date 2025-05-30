@@ -49,6 +49,8 @@ plt.grid(True)
 plt.show()
 ```
 
+🔗 [Go to Week 1 folder](./Week_01_Thermodynamics_Calculus)
+
 ### 📚 Resources
 - Moran & Shapiro – *Fundamentals of Engineering Thermodynamics* (to be replaced if needed)
 - MIT OCW Thermodynamics
@@ -103,6 +105,8 @@ plt.grid(True)
 plt.show()
 ```
 
+🔗 [Go to Week 2 folder](./Week_02_Statistics_Probability)
+
 ### 📚 Resources
 - OpenIntro Statistics
 - Khan Academy – Statistics & Probability
@@ -150,6 +154,8 @@ plt.grid(True)
 plt.show()
 ```
 
+🔗 [Go to Week 3 folder](./Week_03_Fluid_Vector)
+
 ### 📚 Resources
 - White – *Fluid Mechanics*
 - NPTEL Fluid Mechanics (IIT video series)
@@ -167,6 +173,37 @@ plt.show()
 - Euler and Runge-Kutta methods
 - Stability & accuracy (Courant condition)
 
+### 💊 Python Snippet Starter
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+L = 1.0
+nx = 50
+dx = L / (nx - 1)
+alpha = 1e-4
+dt = 0.1
+total_time = 10
+nt = int(total_time / dt)
+
+u = np.zeros(nx)
+u[int(nx/4):int(nx/2)] = 100
+
+for n in range(nt):
+    un = u.copy()
+    for i in range(1, nx-1):
+        u[i] = un[i] + alpha * dt / dx**2 * (un[i+1] - 2*un[i] + un[i-1])
+
+plt.plot(np.linspace(0, L, nx), u)
+plt.title("Heat Conduction Profile at Final Time")
+plt.xlabel("Length")
+plt.ylabel("Temperature")
+plt.grid(True)
+plt.show()
+```
+
+🔗 [Go to Week 4 folder](./Week_04_PDEs_Numerical)
+
 ### 📚 Resources
 - Zill – *Differential Equations with Boundary Value Problems*
 - Chapra – *Applied Numerical Methods*
@@ -174,151 +211,3 @@ plt.show()
 - Python: SciPy, Jupyter, Matplotlib
 
 ---
-
-## 🗅️ Week 5: Turbomachinery Fundamentals
-**Goal:** Build a foundational grasp of axial and radial turbomachinery for propulsion and energy applications
-
-### 🔧 Topics
-- Types of turbomachines: compressors vs. turbines, radial vs. axial
-- Velocity triangles (inlet/outlet, absolute/relative frames)
-- Blade angles, reaction ratio, degree of reaction
-- Euler’s turbomachinery equation
-- Efficiency measures (isentropic vs. polytropic)
-- Stage-by-stage analysis
-- Intro to cascade flow
-
-### 🖖️ Tasks
-- [ ] Sketch velocity triangles for an axial stage
-- [ ] Derive Euler turbine equation and apply to a turbine/compressor stage
-- [ ] Calculate stage efficiency for given inlet/outlet conditions
-- [ ] Visualize pressure and velocity changes across blades
-- [ ] Interpret common performance maps (compressor, turbine)
-
-### 💊 Python/Math Starter
-- Placeholder: Python plotting of velocity triangles and simplified turbine work calculation (to be added)
-
-### 📚 Resources
-- *Fluid Dynamics and Heat Transfer of Turbomachinery*
-- Dixon & Hall – *Fluid Mechanics and Thermodynamics of Turbomachinery*
-- MIT OCW Gas Turbines Lectures
-
----
-
-## 🗅️ Week 6: Material Resistance & Structural Mechanics
-**Goal:** Understand stress, strain, and deformation in engineering components
-
-### 🔧 Topics
-- Normal and shear stress/strain
-- Hooke’s Law and elastic modulus
-- Poisson’s ratio and material properties
-- Mohr’s Circle (intro)
-- Bending, torsion, axial loading
-- Beam deflection and stress concentration
-- Failure criteria (yield, fracture)
-
-### 🖖️ Tasks
-- [ ] Compute axial stress/strain for simple bars
-- [ ] Analyze torsion in circular shafts
-- [ ] Draw shear and bending moment diagrams
-- [ ] Estimate max bending stress in beams
-- [ ] Intro sketch of Mohr’s Circle for 2D stress state
-- [ ] Review material safety factors and strength assumptions
-
-### 📚 Resources
-- Hibbeler – *Mechanics of Materials*
-- Gere & Goodno – *Mechanics of Materials*
-- MIT OCW Solid Mechanics / Statics
-- YouTube: Michel van Biezen – Mechanics of Materials series
-
----
-
-## 🗅️ Week 7: Combustion Theory & High-Speed Flow
-**Goal:** Explore fundamentals of reacting flows and supersonic combustion relevant to airbreathing engines
-
-### 🔧 Topics
-- Chemical kinetics: reaction rates, Arrhenius law
-- Energy release and flame temperature
-- Premixed and diffusion flames
-- Detonation vs. deflagration
-- Combustion in nozzles and ducts
-- High-speed reacting flow: compressibility effects
-- Introduction to **SCRAMJET** propulsion
-- Oblique shocks and heat addition in supersonic flow
-
-### 🖖️ Tasks
-- [ ] Calculate adiabatic flame temperature for hydrogen-air
-- [ ] Sketch Mach number change with heat addition (Rayleigh flow)
-- [ ] Analyze a SCRAMJET schematic for flow path characteristics
-- [ ] Plot oblique shock angle vs. Mach number for various deflection angles
-- [ ] Compute simple laminar flame speed from kinetic model
-
-### 💊 Python Snippet Starter
-```python
-import numpy as np
-import matplotlib.pyplot as plt
-
-def oblique_shock_angle(M, theta_deg, gamma=1.4):
-    theta = np.radians(theta_deg)
-    beta_range = np.radians(np.linspace(theta_deg, 90, 500))
-    f = lambda beta: 2 * np.tan(theta) * (M**2 * np.sin(beta)**2 - 1) / \
-                     (M**2 * (gamma + np.cos(2 * beta)) + 2) - np.tan(beta - theta)
-    diff = [abs(f(b)) for b in beta_range]
-    best_beta = beta_range[np.argmin(diff)]
-    return np.degrees(best_beta)
-
-theta_vals = np.linspace(1, 30, 100)
-shock_angles = [oblique_shock_angle(3.0, th) for th in theta_vals]
-
-plt.plot(theta_vals, shock_angles)
-plt.xlabel("Deflection Angle (°)")
-plt.ylabel("Shock Angle (°)")
-plt.title("Oblique Shock Angle vs Deflection (M=3)")
-plt.grid(True)
-plt.show()
-```
-
-### 📚 Resources
-- Anderson – *Hypersonic and High-Temperature Gas Dynamics*
-- Turns – *An Introduction to Combustion*
-- MIT OCW: Unified Engineering (Propulsion Lectures)
-- NASA Glenn SCRAMJET resources
-
----
-
-## 🗅️ Week 8: Advanced Thermodynamics & Multiphysics CFD
-**Goal:** Couple heat transfer, flow, and structure into simulated reality
-
-### 🔧 Topics
-- Radiation heat transfer (Stefan–Boltzmann law, view factors)
-- Conduction/convection coupling
-- Thermodynamic property interpolation (tables, cubic EOS)
-- Basics of CFD: mesh, solver types, boundary conditions
-- Introduction to OpenFOAM and FEniCS
-- Multiphysics cases (e.g. cooled turbine blade)
-- Postprocessing and verification
-
-### 🖖️ Tasks
-- [ ] Calculate view factor for 2 surfaces
-- [ ] Code a conduction/convection model in 1D wall (lumped method)
-- [ ] Study boundary layer mesh for CFD model
-- [ ] Install and run a basic OpenFOAM case
-- [ ] Visualize velocity and temperature contours
-
-### 📚 Resources
-- Incropera – *Fundamentals of Heat and Mass Transfer*
-- OpenFOAM & FEniCS tutorials
-- MIT CFD Lectures, ANSYS student resources
-
----
-
-## 🤔 After Month 1
-- **Week 9+**: Aerospace Systems, Structural FEM, Rotor Dynamics
-  ☑ Emphasis on simulation, vibration modes, optimization
-
-Stay consistent. Note what you understand, log code + math in GitHub, and revisit difficult topics iteratively.
-
-> "Relearning with experience is not repetition — it's engineering evolution."
-
----
-
-To be continued...
