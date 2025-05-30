@@ -1,3 +1,14 @@
-# Week Template
+# Week 5: Turbomachinery Fundamentals
 
-Use this folder to document goals, theory, tasks, and links for the selected week.
+**Goal:** Understand energy transfer in rotating machines.
+
+## 🔧 Topics
+- Compressors and turbines
+- Euler’s turbomachinery equation
+- Velocity triangles
+- Stage efficiency
+
+## ✅ Tasks
+- Draw velocity triangles
+- Solve power and efficiency examples
+- Compare axial vs radial machines
