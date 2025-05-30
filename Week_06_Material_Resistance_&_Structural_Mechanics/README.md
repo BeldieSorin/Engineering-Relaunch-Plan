@@ -1,3 +1,13 @@
-# Week Template
+# Week 6: Material Resistance & Structural Mechanics
 
-Use this folder to document goals, theory, tasks, and links for the selected week.
+**Goal:** Rebuild fundamentals of stress analysis and structure behavior.
+
+## 🔧 Topics
+- Stress and strain
+- Axial, torsional, and bending loads
+- Mohr’s Circle and beam deflection
+
+## ✅ Tasks
+- Compute beam deflections
+- Draw shear and moment diagrams
+- Sketch Mohr’s Circle
